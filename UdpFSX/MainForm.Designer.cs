@@ -60,6 +60,8 @@
             this.grpLongitudinal = new System.Windows.Forms.GroupBox();
             this.grpLateral = new System.Windows.Forms.GroupBox();
             this.grpOther = new System.Windows.Forms.GroupBox();
+            this.lblBeta = new System.Windows.Forms.Label();
+            this.lblBetaLbl = new System.Windows.Forms.Label();
             this.lblMach = new System.Windows.Forms.Label();
             this.lblMachLabel = new System.Windows.Forms.Label();
             this.grpControls = new System.Windows.Forms.GroupBox();
@@ -75,8 +77,6 @@
             this.lblThrottleLbl = new System.Windows.Forms.Label();
             this.lblElevator = new System.Windows.Forms.Label();
             this.lblElevatorLabel = new System.Windows.Forms.Label();
-            this.lblBeta = new System.Windows.Forms.Label();
-            this.lblBetaLbl = new System.Windows.Forms.Label();
             this.grpLongitudinal.SuspendLayout();
             this.grpLateral.SuspendLayout();
             this.grpOther.SuspendLayout();
@@ -117,7 +117,7 @@
             // 
             // tmrConnected
             // 
-            this.tmrConnected.Interval = 50;
+            this.tmrConnected.Interval = 25;
             this.tmrConnected.Tick += new System.EventHandler(this.tmrConnected_Tick);
             // 
             // lblXlabel
@@ -393,6 +393,24 @@
             this.grpOther.TabStop = false;
             this.grpOther.Text = "Other";
             // 
+            // lblBeta
+            // 
+            this.lblBeta.AutoSize = true;
+            this.lblBeta.Location = new System.Drawing.Point(50, 34);
+            this.lblBeta.Name = "lblBeta";
+            this.lblBeta.Size = new System.Drawing.Size(59, 13);
+            this.lblBeta.TabIndex = 3;
+            this.lblBeta.Text = "<<BETA>>";
+            // 
+            // lblBetaLbl
+            // 
+            this.lblBetaLbl.AutoSize = true;
+            this.lblBetaLbl.Location = new System.Drawing.Point(7, 34);
+            this.lblBetaLbl.Name = "lblBetaLbl";
+            this.lblBetaLbl.Size = new System.Drawing.Size(32, 13);
+            this.lblBetaLbl.TabIndex = 2;
+            this.lblBetaLbl.Text = "Beta:";
+            // 
             // lblMach
             // 
             this.lblMach.AutoSize = true;
@@ -539,24 +557,6 @@
             this.lblElevatorLabel.Size = new System.Drawing.Size(46, 13);
             this.lblElevatorLabel.TabIndex = 0;
             this.lblElevatorLabel.Text = "Elevator";
-            // 
-            // lblBeta
-            // 
-            this.lblBeta.AutoSize = true;
-            this.lblBeta.Location = new System.Drawing.Point(50, 34);
-            this.lblBeta.Name = "lblBeta";
-            this.lblBeta.Size = new System.Drawing.Size(59, 13);
-            this.lblBeta.TabIndex = 3;
-            this.lblBeta.Text = "<<BETA>>";
-            // 
-            // lblBetaLbl
-            // 
-            this.lblBetaLbl.AutoSize = true;
-            this.lblBetaLbl.Location = new System.Drawing.Point(7, 34);
-            this.lblBetaLbl.Name = "lblBetaLbl";
-            this.lblBetaLbl.Size = new System.Drawing.Size(32, 13);
-            this.lblBetaLbl.TabIndex = 2;
-            this.lblBetaLbl.Text = "Beta:";
             // 
             // MainForm
             // 

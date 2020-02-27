@@ -11,13 +11,9 @@ namespace UdpFSX
 {
     class FsDataObjects
     {
-        /* Sending data to FSX
-        FsDataObjects.ControlDataStructure dataStruct = new FsDataObjects.ControlDataStructure();
-        dataStruct.elevator = -elevator_pos / 90.0;
-        dataStruct.aileron = -aileron_pos / 90.0;
-        simconnect.SetDataOnSimObject(FsDataObjects.DEFINITIONS.ArduinoDataStructure, SimConnect.SIMCONNECT_OBJECT_ID_USER, 0, dataStruct); 
-        */
-
+        /// <summary>
+        /// Defines the types of events that can be used
+        /// </summary>
         public enum EVENTS
         {
             FLAPS0,
@@ -27,22 +23,34 @@ namespace UdpFSX
             GEAR_UP
         };
 
+        /// <summary>
+        /// Defines the notification groups
+        /// </summary>
         public enum NOTIFICATION_GROUPS
         {
             GROUP0
         };
 
+        /// <summary>
+        /// Defines the FSX structures used
+        /// </summary>
         public enum DEFINITIONS
         {
             AircraftDataStruct,
             ControlDataStruct,
         };
 
+        /// <summary>
+        /// Defines the data request types
+        /// </summary>
         public enum DATA_REQUESTS
         {
             REQUEST_1,
         };
 
+        /// <summary>
+        /// Defines the data structure received from FSX
+        /// </summary>
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
         public struct AircraftDataStructure
         {
@@ -75,6 +83,9 @@ namespace UdpFSX
             public double beta; // Sideslip, rad
         };
 
+        /// <summary>
+        /// Defines the data structure sent to FSX
+        /// </summary>
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
         public struct ControlDataStructure
         {
@@ -87,6 +98,10 @@ namespace UdpFSX
             public double throttle4;
         };
 
+        /// <summary>
+        /// Registers a data object with the SimConnect management class
+        /// </summary>
+        /// <param name="sim"></param>
         public static void RegisterDataObjects(SimConnect sim)
         {
             // Define the data structure from FSX
